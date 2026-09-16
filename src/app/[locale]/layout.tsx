@@ -47,14 +47,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem={false}
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
+          <ThemeProvider>{children}</ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

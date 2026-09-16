@@ -1,5 +1,19 @@
 {
   "common": {
     "siteName": "Mehran Soufi"
+  },
+  "navigation": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "header": {
+    "language": "Language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
   }
 }
