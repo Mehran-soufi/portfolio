@@ -1,37 +1,36 @@
-import type {Metadata} from 'next';
-import {Geist, Geist_Mono} from 'next/font/google';
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
-import {hasLocale} from 'next-intl';
-import {notFound} from 'next/navigation';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { hasLocale } from "next-intl";
+import { notFound } from "next/navigation";
 
-import {routing} from '@/i18n/routing';
+import "@fontsource-variable/vazirmatn";
 
-import '../globals.css';
+import { routing } from "@/i18n/routing";
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
+import { ThemeProvider } from "@/components/providers/theme-provider";
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+import "../globals.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: 'Mehran Soufi | Computer Engineer & Web Developer',
+  title: "Mehran Soufi | Computer Engineer & Web Developer",
   description:
-    'Personal portfolio of Mehran Soufi, a Computer Engineer and Web Developer.',
+    "Personal portfolio of Mehran Soufi, a Computer Engineer and Web Developer.",
 };
 
 type Props = {
   children: React.ReactNode;
-  params: Promise<{locale: string}>;
+  params: Promise<{ locale: string }>;
 };
 
-export default async function LocaleLayout({children, params}: Props) {
-  const {locale} = await params;
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -42,12 +41,20 @@ export default async function LocaleLayout({children, params}: Props) {
   return (
     <html
       lang={locale}
-      dir={locale === 'fa' ? 'rtl' : 'ltr'}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      dir={locale === "fa" ? "rtl" : "ltr"}
+      className={`${inter.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem={false}
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
