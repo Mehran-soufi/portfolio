@@ -11,6 +11,8 @@ import { routing } from "@/i18n/routing";
 
 import { ThemeProvider } from "@/components/providers/theme-provider";
 
+import { CursorFollower } from "@/components/effects/cursor-follower";
+
 import "../globals.css";
 
 const inter = Inter({
@@ -46,6 +48,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
+        <CursorFollower />
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>{children}</ThemeProvider>
         </NextIntlClientProvider>
