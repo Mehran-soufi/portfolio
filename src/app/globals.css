@@ -128,3 +128,8 @@
     @apply font-sans;
   }
 }
+
+html,
+body {
+  min-height: 100%;
+}
