@@ -26,27 +26,54 @@
     "codeFile": "mehran.ts"
   },
   "about": {
-  "eyebrow": "About Me",
-  "title": "Building, Learning, and Improving",
-  "description": "I’m Mehran Soufi, a Computer Engineer and Web Developer with a strong interest in building modern, fast, and user-focused web experiences. I work with React, Next.js, and TypeScript, with a focus not only on technical quality, but also on attention to detail, user experience, and maintainable project structure.",
-  "descriptionSecond": "My approach is built around problem-solving, attention to detail, continuous learning, and effective teamwork. I see every project as an opportunity to learn, improve, and turn ideas or real-world needs into practical digital products.",
-  "info": {
-    "education": {
-      "label": "Education",
-      "value": "Computer Engineering"
-    },
-    "focus": {
-      "label": "Primary Focus",
-      "value": "Web Development"
-    },
-    "technologies": {
-      "label": "Core Technologies",
-      "value": "React · Next.js · TypeScript"
-    },
-    "languages": {
-      "label": "Languages",
-      "value": "Persian · English"
+    "eyebrow": "About Me",
+    "title": "Building, Learning, and Improving",
+    "description": "I’m Mehran Soufi, a Computer Engineer and Web Developer with a strong interest in building modern, fast, and user-focused web experiences. I work with React, Next.js, and TypeScript, with a focus not only on technical quality, but also on attention to detail, user experience, and maintainable project structure.",
+    "descriptionSecond": "My approach is built around problem-solving, attention to detail, continuous learning, and effective teamwork. I see every project as an opportunity to learn, improve, and turn ideas or real-world needs into practical digital products.",
+    "info": {
+      "education": {
+        "label": "Education",
+        "value": "Computer Engineering"
+      },
+      "focus": {
+        "label": "Primary Focus",
+        "value": "Web Development"
+      },
+      "technologies": {
+        "label": "Core Technologies",
+        "value": "React · Next.js · TypeScript"
+      },
+      "languages": {
+        "label": "Languages",
+        "value": "Persian · English"
+      }
+    }
+  },
+  "workflow": {
+    "eyebrow": "How I Work",
+    "title": "From Idea to Outcome",
+    "description": "More than tools — a practical approach to building useful and high-quality digital experiences.",
+    "steps": {
+      "build": {
+        "number": "01",
+        "title": "Build",
+        "description": "Creating modern, responsive, and user-focused interfaces with attention to detail."
+      },
+      "solve": {
+        "number": "02",
+        "title": "Solve",
+        "description": "Turning real needs and challenges into practical and actionable solutions."
+      },
+      "improve": {
+        "number": "03",
+        "title": "Improve",
+        "description": "Continuously focusing on quality, project structure, and user experience to achieve better results."
+      },
+      "collaborate": {
+        "number": "04",
+        "title": "Collaborate",
+        "description": "Working effectively with others, taking responsibility, and following through to achieve results."
+      }
     }
   }
-}
 }
