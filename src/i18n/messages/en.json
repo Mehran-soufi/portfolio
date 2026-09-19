@@ -168,5 +168,28 @@
       ]
     }
   }
+},
+
+"projects": {
+  "eyebrow": "Projects",
+  "title": "Things I’ve Built",
+  "description": "A selection of projects I’ve worked on to explore ideas, solve problems, and build practical digital experiences.",
+  "liveDemo": "Live Demo",
+  "github": "GitHub",
+  "viewOnGithub": "View {project} on GitHub",
+  "items": {
+    "toolbox": {
+      "title": "Toolbox",
+      "description": "A collection of useful online tools built with modern web technologies."
+    },
+    "movienet": {
+      "title": "MovieNet",
+      "description": "A movie and TV series web application built with Next.js."
+    },
+    "portfolio": {
+      "title": "Personal Portfolio",
+      "description": "A bilingual personal portfolio built to showcase my experience, skills, and projects."
+    }
+  }
 }
 }
