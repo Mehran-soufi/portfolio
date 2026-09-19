@@ -75,5 +75,44 @@
         "description": "Working effectively with others, taking responsibility, and following through to achieve results."
       }
     }
+  },
+  "skills": {
+  "eyebrow": "Skills",
+  "title": "Tools I Work With",
+  "description": "Technologies and tools I use across web development and digital product building.",
+  "categories": {
+    "frontend": {
+      "title": "Frontend Development",
+      "description": "Building modern, responsive, and user-focused interfaces.",
+      "skills": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Sass"
+      ]
+    },
+    "frameworks": {
+      "title": "Frameworks & UI",
+      "description": "Tools for building, designing, and developing projects efficiently.",
+      "skills": [
+        "Next.js",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Bootstrap"
+      ]
+    },
+    "tools": {
+      "title": "Tools & Workflow",
+      "description": "Tools I use for development, project management, and collaboration.",
+      "skills": [
+        "Git",
+        "GitHub",
+        "Axios",
+        "VS Code"
+      ]
+    }
   }
+}
 }
