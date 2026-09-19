@@ -5,6 +5,7 @@ import { Hero } from "@/components/sections/hero/hero";
 import { About } from "@/components/sections/about/about";
 import { Workflow } from "@/components/sections/workflow/workflow";
 import { Skills } from "@/components/sections/skills/skills";
+import { Experience } from "@/components/sections/experience/experience";
 
 export default async function HomePage() {
   const t = await getTranslations("common");
@@ -18,6 +19,7 @@ export default async function HomePage() {
         <About />
         <Workflow />
         <Skills />
+        <Experience/>
       </main>
     </>
   );

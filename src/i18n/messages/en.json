@@ -114,5 +114,59 @@
       ]
     }
   }
+},
+"experience": {
+  "eyebrow": "Experience",
+  "title": "My Professional Journey",
+  "description": "A look at my professional experience, responsibilities, and the path I’ve taken so far.",
+  "items": {
+    "oghab": {
+      "date": "May 2026 — Present",
+      "company": "Oghab Neshan Iranian",
+      "role": "Administrative Staff",
+      "description": "Worked collaboratively with team members, managed assigned tasks, and followed up on responsibilities to ensure they were completed properly and on time."
+    },
+    "ramin": {
+      "date": "September 2025 — May 2026",
+      "company": "Ramin Bazargan",
+      "role": "Administrative Staff",
+      "description": "Supported administrative and operational activities within the company."
+    },
+    "military": {
+      "date": "December 2023 — August 2025",
+      "company": "Military Service",
+      "role": "Military Service"
+    },
+    "sheypoor": {
+      "date": "May 2019 — November 2023",
+      "company": "Sheypoor",
+      "role": "Site Supervisor",
+      "location": "Remote",
+      "responsibilities": [
+        "Reviewed and monitored user-submitted listings to ensure accuracy, completeness, proper categorization, and compliance with platform guidelines.",
+        "Checked listings for inappropriate or prohibited content and helped maintain the quality of published content.",
+        "Served as a shift supervisor, coordinating daily tasks and supporting the team during assigned shifts.",
+        "Provided suggestions for improving the website’s user interface based on observations and user-facing workflows."
+      ]
+    },
+    "kikaavous": {
+      "date": "July 2022 — September 2022",
+      "company": "Kikaavous Zaman",
+      "role": "React Intern",
+      "responsibilities": [
+        "Gained hands-on experience with React and Sass through practical frontend development tasks.",
+        "Assisted with frontend-related tasks and developed practical experience in a real-world React environment."
+      ]
+    },
+    "mobinatek": {
+      "date": "May 2021 — February 2022",
+      "company": "Mobinatek",
+      "role": "Web Teacher / Teaching Assistant",
+      "responsibilities": [
+        "Assisted the instructor during web development training sessions and supported students with practical exercises and course materials.",
+        "Solved assigned exercises and helped students understand web development concepts."
+      ]
+    }
+  }
 }
 }

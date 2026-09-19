@@ -15,23 +15,22 @@ type ThemeProviderProps = {
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
+function getInitialTheme(): Theme {
+  if (typeof window === 'undefined') {
+    return 'dark';
+  }
+
+  const storedTheme = localStorage.getItem('theme');
+
+  if (storedTheme === 'light' || storedTheme === 'dark') {
+    return storedTheme;
+  }
+
+  return 'dark';
+}
+
 export function ThemeProvider({children}: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>('dark');
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem('theme');
-
-    if (storedTheme === 'light' || storedTheme === 'dark') {
-      setTheme(storedTheme);
-      document.documentElement.classList.toggle(
-        'dark',
-        storedTheme === 'dark',
-      );
-      return;
-    }
-
-    document.documentElement.classList.add('dark');
-  }, []);
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark');
