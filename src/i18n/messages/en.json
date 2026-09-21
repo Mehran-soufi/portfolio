@@ -191,5 +191,43 @@
       "description": "A bilingual personal portfolio built to showcase my experience, skills, and projects."
     }
   }
+},
+"contact": {
+  "eyebrow": "Get In Touch",
+  "title": "Let's Connect",
+  "description": "Whether you have a job opportunity, a project, or simply want to get in touch, I’d be happy to hear from you.",
+  "info": {
+    "eyebrow": "Let's Talk",
+    "title": "Have something in mind?",
+    "description": "Feel free to reach out through any of the channels below. I’m always open to professional conversations and new opportunities."
+  },
+  "links": {
+    "email": {
+      "label": "Email",
+      "value": "mehransoufi1@gmail.com"
+    },
+    "github": {
+      "label": "GitHub",
+      "value": "github.com/Mehran-soufi"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "value": "LinkedIn Profile"
+    }
+  },
+  "form": {
+    "eyebrow": "Send A Message",
+    "title": "Let's Start a Conversation",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "message": "Message",
+    "messagePlaceholder": "Tell me a little about your message...",
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "success": "Your message has been sent successfully.",
+    "error": "Something went wrong. Please try again."
+  }
 }
 }

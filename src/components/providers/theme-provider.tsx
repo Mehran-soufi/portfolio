@@ -1,6 +1,11 @@
 'use client';
 
-import {createContext, useContext, useEffect, useState} from 'react';
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useSyncExternalStore,
+} from 'react';
 
 type Theme = 'light' | 'dark';
 
@@ -15,27 +20,45 @@ type ThemeProviderProps = {
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
-function getInitialTheme(): Theme {
+function getStoredTheme(): Theme {
   if (typeof window === 'undefined') {
     return 'dark';
   }
 
   const storedTheme = localStorage.getItem('theme');
 
-  if (storedTheme === 'light' || storedTheme === 'dark') {
-    return storedTheme;
-  }
+  return storedTheme === 'light' ? 'light' : 'dark';
+}
 
+function subscribeToTheme(callback: () => void) {
+  window.addEventListener('storage', callback);
+
+  return () => {
+    window.removeEventListener('storage', callback);
+  };
+}
+
+function getServerTheme(): Theme {
   return 'dark';
 }
 
 export function ThemeProvider({children}: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const theme = useSyncExternalStore(
+    subscribeToTheme,
+    getStoredTheme,
+    getServerTheme,
+  );
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark');
     localStorage.setItem('theme', theme);
   }, [theme]);
+
+  const setTheme = (nextTheme: Theme) => {
+    localStorage.setItem('theme', nextTheme);
+
+    window.dispatchEvent(new Event('storage'));
+  };
 
   return (
     <ThemeContext.Provider value={{theme, setTheme}}>
