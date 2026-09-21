@@ -39,6 +39,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     notFound();
   }
 
+
   const messages = await getMessages();
 
   return (
