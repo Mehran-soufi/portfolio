@@ -1,18 +1,17 @@
-'use client';
+"use client";
 
-import {useState} from 'react';
-import {useTranslations} from 'next-intl';
-import {Loader2, Send} from 'lucide-react';
-import {toast} from 'sonner';
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useTranslations } from "next-intl";
+import { Loader2, Send } from "lucide-react";
+import { toast } from "sonner";
 
 export function ContactForm() {
-  const t = useTranslations('contact.form');
+  const t = useTranslations("contact.form");
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (
-    event: React.FormEvent<HTMLFormElement>,
-  ) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (isSubmitting) return;
@@ -20,15 +19,40 @@ export function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      // Temporary submission simulation.
-      // This will be replaced with the real contact API.
-      await new Promise((resolve) => setTimeout(resolve, 800));
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-      event.currentTarget.reset();
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error("EmailJS environment variables are missing.");
+      }
 
-      toast.success(t('success'));
+      const form = event.currentTarget;
+
+      const formData = new FormData(form);
+
+      const name = String(formData.get("name") ?? "");
+      const email = String(formData.get("email") ?? "");
+      const message = String(formData.get("message") ?? "");
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          name,
+          email,
+          message,
+        },
+        {
+          publicKey,
+        },
+      );
+
+      form.reset();
+
+      toast.success(t("success"));
     } catch {
-      toast.error(t('error'));
+      toast.error(t("error"));
     } finally {
       setIsSubmitting(false);
     }
@@ -38,11 +62,11 @@ export function ContactForm() {
     <div className="rounded-3xl border border-border bg-card p-6 shadow-xl shadow-black/5 sm:p-8">
       <div>
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sunset-pink">
-          {t('eyebrow')}
+          {t("eyebrow")}
         </p>
 
         <h3 className="mt-3 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-          {t('title')}
+          {t("title")}
         </h3>
       </div>
 
@@ -52,7 +76,7 @@ export function ContactForm() {
             htmlFor="contact-name"
             className="mb-2 block text-sm font-medium text-foreground"
           >
-            {t('name')}
+            {t("name")}
           </label>
 
           <input
@@ -61,7 +85,7 @@ export function ContactForm() {
             type="text"
             required
             autoComplete="name"
-            placeholder={t('namePlaceholder')}
+            placeholder={t("namePlaceholder")}
             className="h-12 w-full rounded-xl border border-border bg-background px-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-sunset-pink/50 focus:ring-2 focus:ring-sunset-pink/10"
           />
         </div>
@@ -71,7 +95,7 @@ export function ContactForm() {
             htmlFor="contact-email"
             className="mb-2 block text-sm font-medium text-foreground"
           >
-            {t('email')}
+            {t("email")}
           </label>
 
           <input
@@ -80,7 +104,7 @@ export function ContactForm() {
             type="email"
             required
             autoComplete="email"
-            placeholder={t('emailPlaceholder')}
+            placeholder={t("emailPlaceholder")}
             className="h-12 w-full rounded-xl border border-border bg-background px-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-sunset-pink/50 focus:ring-2 focus:ring-sunset-pink/10"
           />
         </div>
@@ -90,7 +114,7 @@ export function ContactForm() {
             htmlFor="contact-message"
             className="mb-2 block text-sm font-medium text-foreground"
           >
-            {t('message')}
+            {t("message")}
           </label>
 
           <textarea
@@ -98,7 +122,7 @@ export function ContactForm() {
             name="message"
             required
             rows={6}
-            placeholder={t('messagePlaceholder')}
+            placeholder={t("messagePlaceholder")}
             className="w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm leading-7 text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-sunset-pink/50 focus:ring-2 focus:ring-sunset-pink/10"
           />
         </div>
@@ -111,12 +135,12 @@ export function ContactForm() {
           {isSubmitting ? (
             <>
               <Loader2 className="size-4 animate-spin" />
-              {t('sending')}
+              {t("sending")}
             </>
           ) : (
             <>
               <Send className="size-4" />
-              {t('submit')}
+              {t("submit")}
             </>
           )}
         </button>

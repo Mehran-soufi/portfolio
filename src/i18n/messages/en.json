@@ -229,5 +229,19 @@
     "success": "Your message has been sent successfully.",
     "error": "Something went wrong. Please try again."
   }
+},
+"footer": {
+  "role": "Computer Engineer & Web Developer",
+  "description": "Building thoughtful digital experiences with modern web technologies.",
+  "links": {
+    "label": "Footer navigation",
+    "title": "Quick Links",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "copyright": "© {year} Mehran Soufi. All rights reserved."
 }
 }
