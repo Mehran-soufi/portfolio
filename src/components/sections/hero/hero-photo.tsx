@@ -10,7 +10,7 @@ export function HeroPhoto() {
 
       <div className="relative aspect-4/5 overflow-hidden rounded-3xl border border-white/10 bg-card shadow-2xl shadow-black/20">
         <Image
-          src="/images/profile.webp"
+          src="/portfolio/images/profile.webp"
           alt="Mehran Soufi"
           fill
           priority
