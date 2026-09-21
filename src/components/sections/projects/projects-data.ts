@@ -17,7 +17,7 @@ export const projects: Project[] = [
   {
     slug: 'movienet',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    image: '/portfolio/images/projects/movienet.webp',
+    image: '/portfolio/images/projects/Movienet.webp',
     liveUrl: 'https://movienet-nextjs-soufi.vercel.app',
     githubUrl: 'https://github.com/Mehran-soufi/movienet-nextjs',
   },
@@ -25,7 +25,7 @@ export const projects: Project[] = [
     slug: 'portfolio',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'next-intl'],
     image: '/portfolio/images/projects/portfolio.webp',
-    liveUrl: 'https://toolbox-app.mehransoufi33.workers.dev/',
+    liveUrl: 'https://mehran-soufi.github.io/portfolio/fa',
     githubUrl: 'https://github.com/Mehran-soufi/portfolio',
   },
 ];
