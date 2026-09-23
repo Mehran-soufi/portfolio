@@ -143,6 +143,12 @@ For professional inquiries, collaboration, or further information, visit my port
 
 ---
 
+## 📄 Resume
+
+[View Resume](https://mehran-soufi.github.io/portfolio/resume/Mehran-Soufi-Resume.pdf)
+
+---
+
 ## 📄 License
 
 This project is a personal portfolio website.
