@@ -1,36 +1,148 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mehran Soufi — Personal Portfolio
 
-## Getting Started
+A modern, bilingual personal portfolio website built with **Next.js**, **React**, and **TypeScript**.
 
-First, run the development server:
+The portfolio presents my background as a **Computer Engineer & Web Developer**, along with my skills, experience, selected projects, and ways to get in touch.
+
+🌐 **Live Portfolio:** [View Portfolio](https://mehran-soufi.github.io/portfolio/fa)
+
+---
+
+## ✨ Features
+
+- 🌐 Persian and English support
+- 🌓 Light and dark themes
+- 📱 Responsive design
+- 💻 Developer-focused interface
+- 🌅 Sunset-inspired visual identity
+- 🧑‍💻 Skills and experience showcase
+- 📂 Selected projects showcase
+- 📬 Contact form
+- 🔔 Toast notifications
+
+---
+
+## 🛠️ Tech Stack
+
+### Core
+
+- **Next.js 16**
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS 4**
+
+### UI & Styling
+
+- **shadcn/ui**
+- **Base UI**
+- **Lucide React**
+- **Simple Icons**
+- **next-themes**
+- **Sonner**
+
+### Internationalization & Fonts
+
+- **next-intl**
+- **Vazirmatn**
+
+### Contact
+
+- **EmailJS**
+
+### Development
+
+- **ESLint**
+
+---
+
+## 📁 Project Structure
+
+```text
+portfolio/
+├── .github/
+│   └── workflows/
+├── public/
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── i18n/
+│   └── ...
+├── .gitignore
+├── components.json
+├── eslint.config.mjs
+├── next.config.ts
+├── package.json
+├── postcss.config.mjs
+├── tsconfig.json
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Mehran-soufi/portfolio.git
+cd portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🌍 Languages
 
-To learn more about Next.js, take a look at the following resources:
+The portfolio is available in:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 🇮🇷 **Persian:** `/fa`
+- 🇬🇧 **English:** `/en`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📦 Production Build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Create a production build with:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+```
+
+---
+
+## 👨‍💻 About
+
+I'm **Mehran Soufi**, a Computer Engineer focused on web development and modern frontend technologies.
+
+I enjoy building clean, responsive, and user-friendly web applications while continuously learning and improving my technical skills.
+
+---
+
+## 📫 Contact
+
+For professional inquiries, collaboration, or further information, visit my portfolio:
+
+🌐 [mehransoufi.github.io/portfolio](https://mehran-soufi.github.io/portfolio/fa)
+
+---
+
+## 📄 License
+
+This project is a personal portfolio website.
